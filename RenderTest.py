@@ -11,7 +11,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecFrameStack
 from stable_baselines3.common.evaluation import evaluate_policy
 
 LOG_DIR = './logs/'
-MODEL_PATH = './train/final_trained_model.zip'
+MODEL_PATH = './train/continued_model_2900000.zip'
 
 # Custom Street Fighter environment
 class StreetFighter(Env): 
@@ -46,7 +46,7 @@ class StreetFighter(Env):
     def render(self, *args, **kwargs):
         self.game.render()
         time.sleep(0.01)
-        
+      
     def close(self):
         self.game.close()
 
